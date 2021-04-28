@@ -5,17 +5,6 @@ from .models import Post
 
 
 # Create your views here.
-def registerPage(request):
-
-    context = {}
-    return render(request, 'accounts/register')
-
-
-def loginPage(request):
-    
-    context = {}
-    return render(request, 'accounts/login')
-
 class BlogListView(ListView):
 
     model = Post
@@ -44,4 +33,7 @@ class BlogDeleteView(DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
+
+
+
 
